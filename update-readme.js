@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+import { readFile, writeFile } from 'fs';
+import { join } from 'path';
 
 function editMarkdownFile(replacementText, oldText) {
-  const filePath = path.join(__dirname, 'README.md');
+  const filePath = join(__dirname, 'README.md');
 
-  fs.readFile(filePath, 'utf8', (err, data) => {
+  readFile(filePath, 'utf8', (err, data) => {
     if (err) {
       console.error(`Error reading file: ${err}`);
       return;
@@ -12,7 +12,7 @@ function editMarkdownFile(replacementText, oldText) {
 
     const modifiedContent = data.replace(oldText, replacementText);
 
-    fs.writeFile(filePath, modifiedContent, 'utf8', (err) => {
+    writeFile(filePath, modifiedContent, 'utf8', (err) => {
       if (err) {
         console.error(`Error writing file: ${err}`);
         return;
@@ -22,8 +22,14 @@ function editMarkdownFile(replacementText, oldText) {
   });
 }
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  editMarkdownFile("theme=merko", "theme=default");
-} else {
-  editMarkdownFile("theme=default", "theme=merko");
+function main() {
+  const htmlElement = document.querySelector('html');
+  const theme = htmlElement.getAttribute('data-color-mode');
+  
+  if (theme === 'light') {
+    editMarkdownFile("theme=default", "theme=merko");
+  } else {
+    editMarkdownFile("theme=merko", "theme=default");
+  }
+  
 }
