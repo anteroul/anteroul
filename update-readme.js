@@ -31,5 +31,6 @@ function main() {
   } else {
     editMarkdownFile("theme=merko", "theme=default");
   }
-  
 }
+
+main();
