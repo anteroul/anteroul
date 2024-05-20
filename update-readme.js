@@ -1,10 +1,10 @@
-import { readFile, writeFile } from 'fs';
-import { join } from 'path';
+const fs = require('fs');
+const path = require('path');
 
 function editMarkdownFile(replacementText, oldText) {
-  const filePath = join(__dirname, 'README.md');
+  const filePath = path.join(__dirname, 'README.md');
 
-  readFile(filePath, 'utf8', (err, data) => {
+  fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
       console.error(`Error reading file: ${err}`);
       return;
@@ -12,7 +12,7 @@ function editMarkdownFile(replacementText, oldText) {
 
     const modifiedContent = data.replace(oldText, replacementText);
 
-    writeFile(filePath, modifiedContent, 'utf8', (err) => {
+    fs.writeFile(filePath, modifiedContent, 'utf8', (err) => {
       if (err) {
         console.error(`Error writing file: ${err}`);
         return;
