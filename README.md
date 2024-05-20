@@ -4,5 +4,5 @@
 - 📫 How to reach me best: LinkedIn
 
 #### My most used programming languages:
- ###### [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&theme=merko&langs_count=8)](https://github.com/anuraghazra/github-readme-stats)
-  
+ ###### [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&theme=merko&langs_count=8)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only)
+ ###### [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&theme=merko&langs_count=8)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
