@@ -1,65 +1,31 @@
-const fs = fetch("fs");
+const fs = require('fs');
+const path = require('path');
 
-// Function to edit Markdown file
-async function editMarkdownFile(replacementText, oldText) {
-  const url = "https://raw.githubusercontent.com/anteroul/anteroul/main/README.md";
-  let data;
+function editMarkdownFile(replacementText, oldText) {
+  const filePath = path.join(__dirname, 'README.md');
 
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch data: ${response.status}`);
-    }
-    data = await response.text();
-  } catch (error) {
-    console.log(`Repository not found. ${error}`);
-    return;
-  }
-
-  // Edit the content (for example, replacing "old text" with "new text")
-  const modifiedContent = data.replace(oldText, replacementText);
-
-  // Write the modified content back to the Markdown file
-  fetch(url, modifiedContent, 'utf8', (err) => {
+  fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-      console.error('Error writing file:', err);
+      console.error(`Error reading file: ${err}`);
       return;
     }
-    console.log('Markdown file updated successfully.');
+
+    const modifiedContent = data.replace(oldText, replacementText);
+
+    fs.writeFile(filePath, modifiedContent, 'utf8', (err) => {
+      if (err) {
+        console.error(`Error writing file: ${err}`);
+        return;
+      }
+      console.log('Markdown file updated successfully.');
+    });
   });
 }
 
-async function getGithubColorTheme() {
-  const url = "https://api.github.com/";
+const darkMode = true; // Set this manually
 
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was invalid.");
-      }
-      return response.text();
-    })
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      const element = doc.getElementsByClassName("turbo-progress-bar");
-      const theme = element.getAttribute("data-color-mode").text();
-      console.log(`Element with data-theme attribute: ${element}`);
-      console.log(`Element with data-theme attribute: ${theme}`);
-      return theme;
-    })
-    .catch(error => {
-      console.error("There was a problem with the fetch operation:", error);
-    });
+if (darkMode) {
+  editMarkdownFile("theme=merko", "theme=default");
+} else {
+  editMarkdownFile("theme=default", "theme=merko");
 }
-
-async function main() {
-  const darkMode = getGithubColorTheme();
-
-  if (darkMode == "light")
-    editMarkdownFile("theme=default", "theme=merko");
-  else
-    editMarkdownFile("theme=merko", "theme=default");
-}
-
-main();
