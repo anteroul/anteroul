@@ -22,15 +22,23 @@ function editMarkdownFile(replacementText, oldText) {
   });
 }
 
-function main() {
-  const htmlElement = document.querySelector('html');
-  const theme = htmlElement.getAttribute('data-color-mode');
-  
-  if (theme === 'light') {
-    editMarkdownFile("theme=default", "theme=merko");
-  } else {
-    editMarkdownFile("theme=merko", "theme=default");
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to detect the color scheme
+  function detectColorScheme() {
+    if (window.matchMedia && window.matchMedia('(data-color-mode="light")').matches) {
+      // User prefers light theme
+      console.log('Light mode is enabled');
+      editMarkdownFile("theme=default", "theme=merko");
+    } else {
+      // User prefers dark theme
+      console.log('Dark mode is enabled');
+      editMarkdownFile("theme=merko", "theme=default");
+    }
   }
-}
 
-main();
+  // Run the detection function on load
+  detectColorScheme();
+
+  // Add a listener to detect changes in the color scheme
+  window.matchMedia('(data-color-mode="dark")').addEventListener('change', detectColorScheme);
+});
