@@ -22,10 +22,15 @@ function editMarkdownFile(replacementText, oldText) {
   });
 }
 
-const darkMode = true; // Set this manually
+// Manually toggle the theme
+async function main() {
+  const darkMode = true; // Set this manually
 
-if (darkMode) {
-  editMarkdownFile("theme=merko", "theme=default");
-} else {
-  editMarkdownFile("theme=default", "theme=merko");
+  if (darkMode) {
+    await editMarkdownFile("theme=merko", "theme=default");
+  } else {
+    await editMarkdownFile("theme=default", "theme=merko");
+  }
 }
+
+main();
