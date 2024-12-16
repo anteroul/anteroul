@@ -1,0 +1,27 @@
+html {
+    font-family: monospace;
+    font-size: 1em;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: darkcyan;
+    text-align: center;
+}
+
+h1 {
+    color: yellow;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}

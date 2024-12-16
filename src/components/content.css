@@ -1,0 +1,117 @@
+/* General Window */
+.content-window {
+    margin-left: 30%;
+    margin-top: 5%;
+    justify-content: center;
+    width: 600px;
+    border: 2px solid #808080;
+    background-color: #c0c0c0;
+    font-family: "Tahoma", "MS Sans Serif", sans-serif;
+    box-shadow: 3px 3px #808080;
+    text-align: left;
+}
+
+/* Title Bar */
+.title-bar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5px;
+}
+
+.title-text {
+    font-weight: bold;
+}
+
+.title-buttons button {
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Menu Bar */
+.menu-bar {
+    background-color: #c0c0c0;
+    border-bottom: 2px solid #808080;
+    display: flex;
+    gap: 5px;
+    padding: 3px;
+}
+
+.menu-bar button {
+    background-color: #c0c0c0;
+    border: 1px solid #808080;
+    padding: 2px 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.menu-bar button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    height: 300px;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 40%;
+    background-color: white;
+    border-right: 2px solid #808080;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 3px 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Content Area */
+.content-area {
+    padding: 10px;
+    background-color: white;
+    width: 60%;
+}
+
+.content-area h1 {
+    font-size: 16px;
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+.content-area p {
+    font-size: 12px;
+    color: black;
+}
+
+.content-area ul {
+    list-style: disc;
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.content-area a {
+    font-size: 12px;
+    color: blue;
+}
