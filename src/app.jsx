@@ -43,20 +43,16 @@ function Contact() {
 
 export default function App() {
     const [page, setPage] = useState(0);
+    const year = new Date().getFullYear();
 
     // Function to render the page content
     const renderPageContent = () => {
         switch (page) {
-            case 0:
-                return <AboutMe />;
-            case 1:
-                return <Skillsets />;
-            case 2:
-                return <Portfolio />;
-            case 3:
-                return <Contact />;
-            default:
-                return;
+            default: return;
+            case 1: return <AboutMe />;
+            case 2: return <Skillsets />;
+            case 3: return <Portfolio />;
+            case 4: return <Contact />;
         }
     };
 
@@ -66,7 +62,7 @@ export default function App() {
             <NavBar onPageChange={setPage} />
             <br />
             <div id="page-content">{renderPageContent()}</div>
-            <p id="footer">© Uljas Antero Lindell 2024</p>
+            <p id="footer">© Uljas Antero Lindell {year}</p>
         </>
     );
 }
