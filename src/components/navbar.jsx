@@ -1,4 +1,4 @@
-import "./navbar.css";
+import "./styles/navbar.css";
 
 export default function NavBar({ onPageChange }) {
     return (

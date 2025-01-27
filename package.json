@@ -1,14 +1,16 @@
 {
   "name": "anteroul",
   "version": "1.0.0",
-  "description": "[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&theme=merko&langs_count=10)](https://github.com/anuraghazra/github-readme-stats#gh-dark-mode-only) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&theme=default&langs_count=10)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)",
+  "description": "personal website",
   "main": "index.js",
   "scripts": {
     "start": "npm run install-dependencies && npm run dev",
     "install-dependencies": "npm i",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,8 @@
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^5.1.0",
+    "gh-pages": "^6.3.0",
     "vite": "^6.0.3"
-  }
+  },
+  "homepage": "https://anteroul.github.io/"
 }

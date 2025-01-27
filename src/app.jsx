@@ -30,7 +30,47 @@ function AboutMe() {
 }
 
 function Skillsets() {
-    return <PageContent title="Portfolio" content={<p>Lorem ipsum.</p>} />;
+    const images = [
+        'src/images/cpp.png',
+        'src/images/cs.png',
+        'src/images/git.png',
+        'src/images/linux.png',
+        'src/images/py.png',
+        'src/images/go.png',
+        'src/images/unity.png',
+        'src/images/c.png',
+        'src/images/gl.png',
+        'src/images/vulkan.png',
+        'src/images/directx.png',
+        'src/images/java.png',
+        'src/images/js.png',
+        'src/images/wgpu.png',
+    ];
+
+    return (
+        <div
+            className="flex flex-wrap justify-center gap-4 p-4"
+            style={{ maxWidth: '600px', margin: '0 auto' }}
+        >
+            {images.map((src, index) => (
+                <div
+                    key={index}
+                    className="flex justify-center items-center bg-gray-200 rounded-xl"
+                    style={{
+                        width: '150px',
+                        height: '150px',
+                        overflow: 'hidden',
+                    }}
+                >
+                    <img
+                        src={src}
+                        alt={`Image ${index + 1}`}
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+            ))}
+        </div>
+    );
 }
 
 function Portfolio() {
