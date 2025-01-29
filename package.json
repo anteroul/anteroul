@@ -2,7 +2,7 @@
   "name": "anteroul",
   "version": "1.0.0",
   "description": "personal website",
-  "main": "index.js",
+  "main": "./src/index.jsx",
   "scripts": {
     "start": "npm run install-dependencies && npm run dev",
     "install-dependencies": "npm i",
@@ -10,7 +10,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
