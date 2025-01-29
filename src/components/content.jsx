@@ -7,25 +7,16 @@ export const WelcomeText = () => {
         <>
             <p>Welcome to my personal website!</p>
             <p>
-<<<<<<< HEAD
                 My name is Antero. I'm a programmer and a professional nerd. I studied at
-=======
-                My name is Antero Lindell. I'm a programmer and a professional nerd. I studied at
->>>>>>> main
                 Metropolia UAS majoring in Game Development. I'm especially experienced in
                 game engine design, low-level programming languages, and graphics APIs and
                 multimedia libraries such as OpenGL, WebGPU, SDL, Raylib, DirectX and
                 Vulkan.
             </p>
             <p>
-<<<<<<< HEAD
-                My first programming language I learned was ActionScript at the age of 12
-                which was the language used for Flash games.
-=======
                 The first programming language I learned was ActionScript at the early age of 12
                 which was the language used for making Flash games. After experimenting some time with 
                 Flash I quickly upgraded to languages such as C# and JavaScript eventually falling in love with C.
->>>>>>> main
             </p>
         </>
     );
