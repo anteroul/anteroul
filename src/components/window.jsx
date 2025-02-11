@@ -14,7 +14,7 @@ const Sidebar = ({ toggle }) => {
         <li>📄 Embedded Systems</li>
         <li>📄 Assembly Language</li>
         <li>📄 Linux</li>
-        <li><a href="https://valiantinteractive.itch.io/">📂 Game Developement</a></li>
+        <li><a href="https://valiantinteractive.itch.io/">📂 Game Development</a></li>
       </ul>
     </div>
   );

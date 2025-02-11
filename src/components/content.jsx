@@ -24,21 +24,21 @@ export const WelcomeText = () => {
 
 export const ImageGrid = () => {
     const images = [
-        "src/images/cs.png",
-        "src/images/cpp.png",
-        "src/images/c.png",
-        "src/images/linux.png",
-        "src/images/go.png",
-        "src/images/unity.png",
-        "src/images/git.png",
-        "src/images/java.png",
-        "src/images/aws.png",
-        "src/images/js.png",
-        "src/images/gl.png",
-        "src/images/vulkan.png",
-        "src/images/directx.png",
-        "src/images/wgpu.png",
-        "src/images/py.png",
+        "./images/cpp.png",
+        "./images/c.png",
+        "./images/linux.png",
+        "./images/go.png",
+        "./images/unity.png",
+        "./images/git.png",
+        "./images/java.png",
+        "./images/aws.png",
+        "./images/cs.png",
+        "./images/js.png",
+        "./images/gl.png",
+        "./images/vulkan.png",
+        "./images/directx.png",
+        "./images/wgpu.png",
+        "./images/py.png",
     ];
 
     return (
@@ -147,7 +147,7 @@ export const ContactUs = () => {
             </div>
         </>
     );
-}
+};
 
 
 export default (ImageGrid, WelcomeText, RotatingCube, ContactUs);
