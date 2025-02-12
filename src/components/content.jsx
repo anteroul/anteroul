@@ -132,7 +132,7 @@ export const RotatingCube = () => {
             <img src="./github.png" alt="GitHub icon" />
         </div>
         </>
-    );
+    )
 };
 
 export const ContactUs = () => {
@@ -146,7 +146,7 @@ export const ContactUs = () => {
                 <a href="mailto:valiant.lindenvalley@proton.me"><img src="./email.png"/> - Email</a>
             </div>
         </>
-    );
+    )
 };
 
 

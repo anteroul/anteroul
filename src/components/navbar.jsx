@@ -12,5 +12,5 @@ export default function NavBar({ onPageChange }) {
                 <br />
             </nav>
         </>
-    );
+    )
 }

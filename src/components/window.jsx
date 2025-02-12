@@ -17,7 +17,7 @@ const Sidebar = ({ toggle }) => {
         <li><a href="https://valiantinteractive.itch.io/">📂 Game Development</a></li>
       </ul>
     </div>
-  );
+  )
 };
 
 export default function PageContent({ title, content, toggleSidebar, onPageChange }) {
@@ -53,5 +53,5 @@ export default function PageContent({ title, content, toggleSidebar, onPageChang
         </div>
       </div>
     </div>
-  );
+  )
 }
