@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&hide_border=true&bg_color=0D1117&title_color=00FF41&text_color=00FF41&icon_color=00FF41&langs_count=8">
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&hide_border=true&bg_color=FFFFFF&title_color=0F5C2E&text_color=1B3D24&icon_color=1B7A3D&langs_count=8">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&hide_border=true&bg_color=0D1117&title_color=00FF41&text_color=00FF41&icon_color=00FF41&langs_count=10">
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact&hide_border=true&bg_color=FFFFFF&title_color=0F5C2E&text_color=1B3D24&icon_color=1B7A3D&langs_count=10">
   <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anteroul&layout=compact">
 </picture>
 
